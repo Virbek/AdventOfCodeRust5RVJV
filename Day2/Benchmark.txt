@@ -1,0 +1,3 @@
+Ver 1 :
+	Time (mean ± σ):     181.9 ms ±  10.2 ms    [User: 147.9 ms, System: 24.9 ms]
+	Range (min … max):   173.3 ms … 212.4 ms    16 runs
