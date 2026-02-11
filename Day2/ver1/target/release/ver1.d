@@ -1,1 +1,1 @@
-C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\day2\ver1\target\release\ver1.exe: C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\day2\ver1\ressources\code.txt C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\day2\ver1\src\main.rs
+C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\Day2\ver1\target\release\ver1.exe: C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\Day2\ver1\ressources\code.txt C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\Day2\ver1\src\main.rs
