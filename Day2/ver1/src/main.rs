@@ -102,6 +102,7 @@ fn second_half(contenu : &'static str){
                     let r5 : u32 = five.parse().unwrap();
                     //println!("r1 : {}, r2 : {}, r3 :{}, r4 : {}, r5 : {}", r1,r2,r3,r4,r5);
                     if r1 == r2 && r2 == r3 && r3 == r4 && r4 == r5{
+                        find = true;
                         start.push_str(&limite);
                         start.push_str(&third);
                         start.push_str(&fourth);
