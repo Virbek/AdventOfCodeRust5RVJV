@@ -1,0 +1,1 @@
+C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\day7\ver1\target\release\ver1.exe: C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\day7\ver1\ressources\input.txt C:\msys64\home\0203481A\AdventOfCodeRust5RVJV\day7\ver1\src\main.rs
