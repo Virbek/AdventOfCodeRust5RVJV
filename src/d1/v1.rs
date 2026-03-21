@@ -1,0 +1,80 @@
+//Evann
+
+pub fn solve_part1(input: &str) -> u32 {
+
+    let mut result: u32 = 0;
+    let mut chest: i8 = 50;
+
+
+    let mut combinaison = String::new();
+
+    for c in input.chars(){
+        if c == '\n' {
+            let direction  = combinaison.split_off(1);
+            let direction: u16 = direction
+                .trim()
+                .parse()
+                .unwrap();
+            for _ in 0.. direction{
+                if combinaison == "R" {
+                    chest += 1;
+                    if chest > 99 {
+                        chest = 0 ;
+                    }
+                }else {
+                    chest -= 1;
+                    if chest < 0 {
+                        chest = 99;
+                    }
+                }
+            }
+            if chest == 0 {result += 1; }
+            combinaison.clear();
+        }else {
+            combinaison.push(c);
+        }
+    }
+
+    result
+
+}
+
+
+pub fn solve_part2(input: &str) -> u32 {
+
+    let mut result: u32 = 0;
+    let mut chest: i8 = 50;
+
+
+    let mut combinaison = String::new();
+
+    for c in input.chars(){
+        if c == '\n' {
+            let direction  = combinaison.split_off(1);
+            let direction: u16 = direction
+                .trim()
+                .parse()
+                .unwrap();
+            for _ in 0.. direction{
+                if combinaison == "R" {
+                    chest += 1;
+                    if chest > 99 {
+                        chest = 0 ;
+                    }
+                }else {
+                    chest -= 1;
+                    if chest < 0 {
+                        chest = 99;
+                    }
+                }
+                if chest == 0 {result += 1; }
+            }
+            combinaison.clear();
+        }else {
+            combinaison.push(c);
+        }
+    }
+
+    result
+
+}

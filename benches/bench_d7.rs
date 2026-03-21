@@ -1,0 +1,5 @@
+/* Hyperfine 
+
+ver1 first half:
+    Time (mean ± σ):      19.7 ms ±   0.9 ms    [User: 6.3 ms, System: 7.6 ms]
+    Range (min … max):    17.9 ms …  22.5 ms    97 runs */

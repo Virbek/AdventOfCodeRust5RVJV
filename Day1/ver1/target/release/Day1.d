@@ -1,1 +1,0 @@
-D:\Travail\M2\Rust\AdventOfCodeRust5RVJV\Day1\ver1\target\release\Day1.exe: D:\Travail\M2\Rust\AdventOfCodeRust5RVJV\Day1\ver1\ressources\inputs D:\Travail\M2\Rust\AdventOfCodeRust5RVJV\Day1\ver1\src\main.rs
