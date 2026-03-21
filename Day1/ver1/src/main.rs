@@ -1,6 +1,6 @@
 
 fn main() {
-    let contenu = include_str!("../ressources/code.txt");
+    let contenu = include_str!("../ressources/inputs");
 
     let mut result: u32 = 0;
     let mut chest: i8 = 50;
@@ -12,6 +12,7 @@ fn main() {
         if c == '\n' { 
             let direction  = combinaison.split_off(1);
             let direction: u16 = direction
+                                    .trim()
                                     .parse()
                                     .unwrap();
             for _ in 0.. direction{
@@ -26,9 +27,8 @@ fn main() {
                         chest = 99;
                     }
                 }
-                if chest == 0 {result += 1; }
-            } 
-            //if chest == 0 {result += 1; }   
+            }
+            if chest == 0 {result += 1; }
             combinaison.clear();
         }else {
             combinaison.push(c);

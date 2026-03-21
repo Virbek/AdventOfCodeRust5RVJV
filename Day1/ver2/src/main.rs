@@ -1,40 +1,23 @@
-
 fn main() {
-    let contenu = include_str!("../ressources/code.txt");
+    let inputs = include_str!("../ressources/inputs");
 
-    let mut result: u16 = 0;
-    let mut chest: i8 = 50;
+    let mut position:i16 = 50;
+    let mut compteur:u16 = 0;
 
-    
-    let mut combinaison = String::new();
+    for ligne in inputs.lines() {
+        let ligne = ligne.trim();
+        let(sens,nb) = ligne.split_at(1);
+        let distance:i16 = nb.parse().unwrap();
 
-    for c in contenu.chars(){
-        if c == '\n' { 
-            let direction  = combinaison.split_off(1);
-            let direction: u16 = direction
-                                    .parse()
-                                    .unwrap();
-            for _ in 0.. direction{
-                if combinaison == "R" {
-                    chest += 1;
-                    if chest > 99 {
-                        chest = 0 ;
-                    }
-                }else {
-                    chest -= 1;
-                    if chest < 0 {
-                        chest = 99;
-                    }
-                }
-                if chest == 0 {result += 1; }
-            } 
-            //if chest == 0 {result += 1; }   
-            combinaison.clear();
-        }else {
-            combinaison.push(c);
+        match sens{
+            "L" => position = (position + distance).rem_euclid(100),
+            "R" => position = (position - distance).rem_euclid(100),
+            _ => println!("Inconnu")
+        }
+
+        if position == 0{
+            compteur += 1;
         }
     }
-
-    println!("le password est : {}", result);
- 
+    println!("Le mot de passe est {}", compteur);
 }
