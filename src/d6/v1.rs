@@ -5,6 +5,9 @@ pub fn solve_part1(input: &str) -> u64{
     stock.push(Vec::new());
     for c in input.chars(){
         //println!("le char : {c}");
+        if c == '\r' {
+            continue;
+        }
         if stock.len() < (pos+1){
             //println!("je rentre");
             stock.push(Vec::new());
@@ -62,7 +65,6 @@ pub fn solve_part1(input: &str) -> u64{
 pub fn solve_part2(input: &str) -> u64{
     let mut stock: Vec<String> = Vec::new();
     let mut pos : usize = 0;
-    let mut pos_in : usize = 0;
     let contenu = input.replace(" ", "0");
     for c in contenu.chars(){
         if c == '\r' {
@@ -73,7 +75,7 @@ pub fn solve_part2(input: &str) -> u64{
         }
         if c == '\n'{
             pos = 0;
-            pos_in = 0;
+
         }else{
             stock[pos].push(c);
             pos += 1;
@@ -102,7 +104,7 @@ pub fn solve_part2(input: &str) -> u64{
                 let new_var = i.replace('0', "");
                 let new_var:u64 = new_var.parse().unwrap();
                 // print!("{}-{}-{}-",sign, var, new_var);
-                if(sign.contains('+')){
+                if sign.contains('+'){
                     var += new_var;
                 }
                 if sign.contains('*'){
