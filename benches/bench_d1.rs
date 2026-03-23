@@ -30,14 +30,40 @@ use AdventOfCodeRust5RVJV::d1;
 fn bench_d1(c: &mut Criterion) {
     let input = d1::INPUT;
 
-    c.bench_function("d1_v1_part1", |b| {
+    /*c.bench_function("d1_v1_part1", |b| {
         b.iter(|| d1::v1::solve_part1(black_box(input)))
     });
 
     c.bench_function("d1_v2_part1", |b| {
         b.iter(|| d1::v2::solve_part1(black_box(input)))
+    });*/
+
+    c.bench_function("d1_v1_part2", |b| {
+        b.iter(|| d1::v1::solve_part2(black_box(input)))
+    });
+
+    c.bench_function("d1_v2_part2", |b| {
+        b.iter(|| d1::v2::solve_part2(black_box(input)))
     });
 }
 
 criterion_group!(benches, bench_d1);
 criterion_main!(benches);
+
+/*
+d1_v1_part1             time:   [323.30 µs 323.94 µs 324.62 µs]
+                        change: [−34.804% −34.568% −34.338%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+d1_v2_part1             time:   [62.163 µs 63.154 µs 64.355 µs]
+                        change: [−96.176% −96.134% −96.087%] (p = 0.00 < 0.05)
+                        Performance has improved.
+
+La V2 a 5 fois plus de perfs
+
+d1_v1_part2             time:   [493.14 µs 493.84 µs 494.60 µs]
+
+d1_v2_part2             time:   [1.6222 ms 1.6264 ms 1.6327 ms]
+
+V2 à revoir
+ */
