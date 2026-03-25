@@ -15,8 +15,10 @@ fn main() {
     println!("Day 1 - ver2 - part2, le mot de passe est: {}", d1::v2::solve_part2(d1::INPUT));
 
     //Day 2
-    println!("Day 2 - ver1 - part1, le résultat: {}", d2::v1::solve_part1(d2::INPUT));
-    println!("Day 2 - ver1 - part2, le résultat: {}", d2::v1::solve_part2(d2::INPUT));
+    //println!("Day 2 - ver1 - part1, la somme des invalides est: {}", d2::v1::solve_part1(d2::INPUT));
+    println!("Day 2 - ver2 - part1, la somme des invalides est: {}", d2::v2::solve_part1(d2::INPUT));
+
+    /*println!("Day 2 - ver1 - part2, le résultat: {}", d2::v1::solve_part2(d2::INPUT));
 
     //Day 3
     println!("Day 3 - ver1 - part1, le résultat: {}", d3::v1::solve_part1(d3::INPUT));
@@ -37,5 +39,5 @@ fn main() {
 
     //Day 7
     println!("Day 7 - ver1 - part1, le résultat: {}", d7::v1::solve_part1(d7::INPUT));
-    println!("Day 7 - ver1 - part2, le résultat: {}", d7::v1::solve_part2(d7::INPUT));
+    println!("Day 7 - ver1 - part2, le résultat: {}", d7::v1::solve_part2(d7::INPUT));*/
 }
