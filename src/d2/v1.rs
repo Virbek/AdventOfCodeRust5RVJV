@@ -5,8 +5,8 @@ pub fn solve_part1(input: &str) -> u64{
 
     for c in input.chars(){
         if c == ',' || c == '\n' {
-            let s : u32 = start.trim().parse().unwrap();
-            let l : u32 = limite.trim().parse().unwrap();
+            let s : u64 = start.trim().parse().unwrap();
+            let l : u64 = limite.trim().parse().unwrap();
             //println!("start : {}, limite : {}", s, l);
             for i in s..=l {
                 let v = i.to_string();
@@ -47,8 +47,8 @@ pub fn solve_part2(input: &str) -> u64{
 
     for c in input.chars(){
         if c == ',' || c == '\n' {
-            let s : u32 = start.trim().parse().unwrap();
-            let l : u32 = limite.trim().parse().unwrap();
+            let s : u64 = start.trim().parse().unwrap();
+            let l : u64 = limite.trim().parse().unwrap();
             //println!("start : {}, limite : {}", s, l);
             for i in s..=l {
                 let mut find = false;
