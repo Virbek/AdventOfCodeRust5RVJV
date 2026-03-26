@@ -13,9 +13,9 @@ pub fn solve_part1(input: &str) -> u32{
 
     }
 
-    for s in &stock{
+    /*for s in &stock{
         println!("la somme : {}", s);
-    }
+    }*/
 
     stock[0]
 
