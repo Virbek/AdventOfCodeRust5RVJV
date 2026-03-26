@@ -7,5 +7,5 @@ edition = "2024"
 criterion = { version = "0.8", features = ["html_reports"] }
 
 [[bench]]
-name = "bench_d1"
+name = "bench_d2"
 harness = false
