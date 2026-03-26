@@ -5,6 +5,7 @@ mod d4;
 mod d5;
 mod d6;
 mod d7;
+mod d8;
 
 fn main() {
     //Day 1
@@ -38,4 +39,7 @@ fn main() {
     //Day 7
     println!("Day 7 - ver1 - part1, le résultat: {}", d7::v1::solve_part1(d7::INPUT));
     println!("Day 7 - ver1 - part2, le résultat: {}", d7::v1::solve_part2(d7::INPUT));
+
+    //Day 8
+    println!("Day 8 - ver1 - part1, le résultat: {}", d8::v1::solve_part1(d8::INPUT));
 }
