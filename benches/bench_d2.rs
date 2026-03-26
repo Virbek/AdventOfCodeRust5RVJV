@@ -18,22 +18,31 @@ fn bench_d2(c: &mut Criterion) {
 
     /*c.bench_function("d2_v1_part1", |b| {
         b.iter(|| d2::v1::solve_part1(black_box(input)))
-    });*/
+    });
 
     c.bench_function("d2_v2_part1", |b| {
         b.iter(|| d2::v2::solve_part1(black_box(input)))
     });
-    /*
-    c.bench_function("d1_v1_part2", |b| {
-        b.iter(|| d1::v1::solve_part2(black_box(input)))
+    */
+    c.bench_function("d2_v1_part2", |b| {
+        b.iter(|| d2::v1::solve_part2(black_box(input)))
     });
 
-    c.bench_function("d1_v2_part2", |b| {
-        b.iter(|| d1::v2::solve_part2(black_box(input)))
-    });*/
+    c.bench_function("d2_v2_part2", |b| {
+        b.iter(|| d2::v2::solve_part2(black_box(input)))
+    });
 }
 
 criterion_group!(benches, bench_d2);
 criterion_main!(benches);
 
-// d2_v2_part1             time:   [52.882 ms 53.044 ms 53.207 ms]
+/*
+
+Partie 1
+d2_v1_part1             time:   [86.238 ms 86.574 ms 86.957 ms]
+d2_v2_part1             time:   [52.882 ms 53.044 ms 53.207 ms] => Un peu plus perf
+
+Partie 2
+d2_v1_part2             time:   [305.83 ms 306.33 ms 306.88 ms]
+d2_v2_part2             time:   [82.223 ms 82.428 ms 82.659 ms] => Bien plus perf
+ */

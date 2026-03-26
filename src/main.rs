@@ -20,6 +20,7 @@ fn main() {
     println!("Day 2 - ver2 - part1, la somme des invalides est: {}", d2::v2::solve_part1(d2::INPUT));
 
     println!("Day 2 - ver1 - part2, le résultat: {}", d2::v1::solve_part2(d2::INPUT));
+    println!("Day 2 - ver2 - part2, le résultat: {}", d2::v2::solve_part2(d2::INPUT));
 
     //Day 3
     println!("Day 3 - ver1 - part1, le résultat: {}", d3::v1::solve_part1(d3::INPUT));
