@@ -24,7 +24,10 @@ fn main() {
 
     //Day 3
     println!("Day 3 - ver1 - part1, le résultat: {}", d3::v1::solve_part1(d3::INPUT));
+    println!("Day 3 - ver2 - part1, le résultat: {}", d3::v2::solve_part1(d3::INPUT));
+
     println!("Day 3 - ver1 - part2, le résultat: {}", d3::v1::solve_part2(d3::INPUT));
+    println!("Day 3 - ver2 - part2, le résultat: {}", d3::v2::solve_part2(d3::INPUT));
 
     //Day 4
     println!("Day 4 - ver1 - part1, le résultat: {}", d4::v1::solve_part1(d4::INPUT));
