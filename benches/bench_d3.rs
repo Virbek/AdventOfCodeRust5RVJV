@@ -14,7 +14,7 @@ use std::hint::black_box;
 use criterion::{criterion_group, criterion_main, Criterion};
 use AdventOfCodeRust5RVJV::d3;
 
-fn bench_d2(c: &mut Criterion) {
+fn bench_d3(c: &mut Criterion) {
     let input = d3::INPUT;
 
     /*c.bench_function("d3_v1_part1", |b| {
@@ -34,7 +34,7 @@ fn bench_d2(c: &mut Criterion) {
     });
 }
 
-criterion_group!(benches, bench_d2);
+criterion_group!(benches, bench_d3);
 criterion_main!(benches);
 
 /*
