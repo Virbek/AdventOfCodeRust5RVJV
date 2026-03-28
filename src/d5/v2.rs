@@ -35,12 +35,9 @@ pub fn solve_part1(input: &str) -> u32{
             }
         }
 
-        contenu = contenu
-            .into_iter()
-            .enumerate()
-            .filter(|(i, _)| !pos_rem.contains(i))
-            .map(|(_, v)| v)
-            .collect();
+        for i in pos_rem.iter().rev() {
+            contenu.remove(*i);
+        }
         pos_rem.clear();
     }
 
