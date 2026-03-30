@@ -75,7 +75,7 @@ pub fn solve_part1(input: &str) -> u64{
         // 0 pour +, 1 pour *
         let mut res_bloc = if op == '+' { 0 } else { 1 };
 
-        for row in 0..grille.len()-1 {
+        for row in 0..last_row {
             let mut s = String::new();
             for col in debut_bloc..=fin_bloc {
                 if col < grille[row].len() && grille[row][col] != ' '{
@@ -137,9 +137,10 @@ pub fn solve_part2(input: &str) -> u64{
             // 0 pour +, 1 pour *
             let mut res_bloc = if op == '+' { 0 } else { 1 };
 
-            for row in 0..grille.len()-1 {
+            for col in debut_bloc..=fin_bloc {
                 let mut s = String::new();
-                for col in debut_bloc..=fin_bloc {
+
+                for row in 0..last_row {
                     if col < grille[row].len() && grille[row][col] != ' '{
                         s.push(grille[row][col]);
                     }
@@ -175,9 +176,9 @@ pub fn solve_part2(input: &str) -> u64{
         // 0 pour +, 1 pour *
         let mut res_bloc = if op == '+' { 0 } else { 1 };
 
-        for row in 0..grille.len()-1 {
+        for col in debut_bloc..=fin_bloc {
             let mut s = String::new();
-            for col in debut_bloc..=fin_bloc {
+            for row in 0..last_row {
                 if col < grille[row].len() && grille[row][col] != ' '{
                     s.push(grille[row][col]);
                 }
