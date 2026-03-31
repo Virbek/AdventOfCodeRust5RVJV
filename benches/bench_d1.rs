@@ -45,17 +45,25 @@ fn bench_d1(c: &mut Criterion) {
     c.bench_function("d1_v2_part2", |b| {
         b.iter(|| d1::v2::solve_part2(black_box(input)))
     });
+
+    c.bench_function("d1_v3_part2", |b| {
+        b.iter(|| d1::v3::solve_part2(black_box(input)))
+    });
 }
 
 criterion_group!(benches, bench_d1);
 criterion_main!(benches);
 
 /*
+Bench 1 - PC fixe
 d1_v1_part1             time:   [323.30 µs 323.94 µs 324.62 µs]
-d1_v2_part1             time:   [62.163 µs 63.154 µs 64.355 µs]
-La V2 a 5 fois plus de perfs
+d1_v2_part1             time:   [62.163 µs 63.154 µs 64.355 µs] => La V2 a 5 fois plus de perfs
 
 d1_v1_part2             time:   [493.14 µs 493.84 µs 494.60 µs]
-d1_v2_part2             time:   [1.6222 ms 1.6264 ms 1.6327 ms]
-V2 à revoir
+d1_v2_part2             time:   [1.6222 ms 1.6264 ms 1.6327 ms] => V2 à revoir
+
+Bench 2 - PC portable avec V3
+d1_v1_part2             time:   [1.3457 ms 1.3471 ms 1.3485 ms]
+d1_v2_part2             time:   [4.1934 ms 4.1976 ms 4.2021 ms]
+d1_v3_part2             time:   [980.07 µs 994.96 µs 1.0103 ms] => V3 un peu plus perf
  */
