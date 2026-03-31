@@ -30,23 +30,31 @@ use AdventOfCodeRust5RVJV::d1;
 fn bench_d1(c: &mut Criterion) {
     let input = d1::INPUT;
 
-    /*c.bench_function("d1_v1_part1", |b| {
+    // Partie 1
+    let mut group_p1 = c.benchmark_group("d1_part1");
+
+    group_p1.bench_function("v1", |b| {
         b.iter(|| d1::v1::solve_part1(black_box(input)))
     });
 
-    c.bench_function("d1_v2_part1", |b| {
+    group_p1.bench_function("v2", |b| {
         b.iter(|| d1::v2::solve_part1(black_box(input)))
-    });*/
+    });
 
-    c.bench_function("d1_v1_part2", |b| {
+    group_p1.finish();
+
+    // Partie 2
+    let mut group_p2 = c.benchmark_group("d1_part2");
+
+    group_p2.bench_function("v1", |b| {
         b.iter(|| d1::v1::solve_part2(black_box(input)))
     });
 
-    c.bench_function("d1_v2_part2", |b| {
+    group_p2.bench_function("v2", |b| {
         b.iter(|| d1::v2::solve_part2(black_box(input)))
     });
 
-    c.bench_function("d1_v3_part2", |b| {
+    group_p2.bench_function("v3", |b| {
         b.iter(|| d1::v3::solve_part2(black_box(input)))
     });
 }
