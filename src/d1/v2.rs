@@ -11,8 +11,8 @@ pub fn solve_part1(input: &str) -> u16 {
         let distance:i16 = nb.parse().unwrap();
 
         match sens{
-            "L" => position = (position + distance).rem_euclid(100),
-            "R" => position = (position - distance).rem_euclid(100),
+            "L" => position = (position - distance).rem_euclid(100),
+            "R" => position = (position + distance).rem_euclid(100),
             _ => println!("Inconnu")
         }
 
