@@ -28,6 +28,10 @@ fn bench_d3(c: &mut Criterion) {
         b.iter(|| d3::v2::solve_part1(black_box(input)))
     });
 
+    group_p1.bench_function("v3", |b| {
+        b.iter(|| d3::v3::solve_part1(black_box(input)))
+    });
+
     group_p1.finish();
 
     // Partie 2
