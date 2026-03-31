@@ -15,21 +15,32 @@ use AdventOfCodeRust5RVJV::d5;
 fn bench_d5(c: &mut Criterion) {
     let input = d5::INPUT;
 
-    /*c.bench_function("d5_v1_part1", |b| {
+    // Partie 1
+    let mut group_p1 = c.benchmark_group("d5_part1");
+
+    group_p1.bench_function("v1", |b| {
         b.iter(|| d5::v1::solve_part1(black_box(input)))
     });
 
-    c.bench_function("d5_v2_part1", |b| {
+    group_p1.bench_function("v2", |b| {
         b.iter(|| d5::v2::solve_part1(black_box(input)))
     });
 
-    c.bench_function("d5_v1_part2", |b| {
+    group_p1.finish();
+
+    // Partie 2
+    let mut group_p2 = c.benchmark_group("d5_part2");
+
+    group_p2.bench_function("v1", |b| {
         b.iter(|| d5::v1::solve_part2(black_box(input)))
     });
 
-    c.bench_function("d5_v2_part2", |b| {
+    group_p2.bench_function("v2", |b| {
         b.iter(|| d5::v2::solve_part2(black_box(input)))
-    });*/
+    });
+
+    group_p2.finish();
+
 }
 
 criterion_group!(benches, bench_d5);
