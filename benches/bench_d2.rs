@@ -60,5 +60,6 @@ PC portable
 d2_part1/v1             time:   [268.32 ms 273.03 ms 277.89 ms]
 d2_part1/v2             time:   [152.35 ms 156.59 ms 161.64 ms]
 
-
+d2_part2/v1             time:   [856.07 ms 858.20 ms 860.32 ms]
+d2_part2/v2             time:   [210.62 ms 211.10 ms 211.60 ms]
  */
