@@ -57,6 +57,8 @@ fn bench_d1(c: &mut Criterion) {
     group_p2.bench_function("v3", |b| {
         b.iter(|| d1::v3::solve_part2(black_box(input)))
     });
+
+    group_p2.finish();
 }
 
 criterion_group!(benches, bench_d1);
