@@ -11,19 +11,19 @@ fn bench_d8(c: &mut Criterion) {
     let input = d8::INPUT;
 
     c.bench_function("d8_v1_part1", |b| {
-        b.iter(|| d8::v1::solve_part1(black_box(input)))
+        b.iter(|| black_box(d8::v1::solve_part1(black_box(input))))
     });
 
     // c.bench_function("d8_v2_part1", |b| {
-    //     b.iter(|| d8::v2::solve_part1(black_box(input)))
+    //     b.iter(|| black_box(d8::v2::solve_part1(black_box(input))))
     // });
 
     c.bench_function("d8_v1_part2", |b| {
-        b.iter(|| d8::v1::solve_part2(black_box(input)))
+        b.iter(|| black_box(d8::v1::solve_part2(black_box(input))))
     });
 
     // c.bench_function("d8_v2_part2", |b| {
-    //     b.iter(|| d8::v2::solve_part2(black_box(input)))
+    //     b.iter(|| black_box(d8::v2::solve_part2(black_box(input))))
     // });
 }
 

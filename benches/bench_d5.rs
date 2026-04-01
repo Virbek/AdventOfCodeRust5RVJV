@@ -19,11 +19,11 @@ fn bench_d5(c: &mut Criterion) {
     let mut group_p1 = c.benchmark_group("d5_part1");
 
     group_p1.bench_function("v1", |b| {
-        b.iter(|| d5::v1::solve_part1(black_box(input)))
+        b.iter(|| black_box(d5::v1::solve_part1(black_box(input))))
     });
 
     group_p1.bench_function("v2", |b| {
-        b.iter(|| d5::v2::solve_part1(black_box(input)))
+        b.iter(|| black_box(d5::v2::solve_part1(black_box(input))))
     });
 
     group_p1.finish();
@@ -32,11 +32,11 @@ fn bench_d5(c: &mut Criterion) {
     let mut group_p2 = c.benchmark_group("d5_part2");
 
     group_p2.bench_function("v1", |b| {
-        b.iter(|| d5::v1::solve_part2(black_box(input)))
+        b.iter(|| black_box(d5::v1::solve_part2(black_box(input))))
     });
 
     group_p2.bench_function("v2", |b| {
-        b.iter(|| d5::v2::solve_part2(black_box(input)))
+        b.iter(|| black_box(d5::v2::solve_part2(black_box(input))))
     });
 
     group_p2.finish();
