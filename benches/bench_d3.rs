@@ -12,7 +12,7 @@ Time (mean ± σ):      19.0 ms ±   0.7 ms    [User: 8.0 ms, System: 6.0 ms]
 
 use std::hint::black_box;
 use criterion::{criterion_group, criterion_main, Criterion};
-use AdventOfCodeRust5RVJV::{d2, d3};
+use AdventOfCodeRust5RVJV::d3;
 
 fn bench_d3(c: &mut Criterion) {
     let input = d3::INPUT;

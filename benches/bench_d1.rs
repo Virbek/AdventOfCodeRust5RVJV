@@ -38,7 +38,11 @@ fn bench_d1(c: &mut Criterion) {
     });
 
     group_p1.bench_function("v2", |b| {
-        b.iter(|| black_box(d1::v1::solve_part1(black_box(input))))
+        b.iter(|| black_box(d1::v2::solve_part1(black_box(input))))
+    });
+
+    group_p1.bench_function("v3", |b| {
+        b.iter(|| black_box(d1::v3::solve_part1(black_box(input))))
     });
 
     group_p1.finish();

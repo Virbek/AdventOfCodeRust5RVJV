@@ -17,6 +17,7 @@ fn main() {
     println!("Day 1 - ver1 - part2, le mot de passe est: {}", d1::v1::solve_part2(d1::INPUT));
     println!("Day 1 - ver2 - part2, le mot de passe est: {}", d1::v2::solve_part2(d1::INPUT));
 
+    println!("Day 1 - ver3 - part1, le mot de passe est: {}", d1::v3::solve_part1(d1::INPUT));
     println!("Day 1 - ver3 - part2, le mot de passe est: {}", d1::v3::solve_part2(d1::INPUT));
 
     //Day 2

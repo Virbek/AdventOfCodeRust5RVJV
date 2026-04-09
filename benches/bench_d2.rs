@@ -11,7 +11,7 @@ with second half :
 
 use std::hint::black_box;
 use criterion::{criterion_group, criterion_main, Criterion};
-use AdventOfCodeRust5RVJV::{d1, d2};
+use AdventOfCodeRust5RVJV::d2;
 
 fn bench_d2(c: &mut Criterion) {
     let input = d2::INPUT;
