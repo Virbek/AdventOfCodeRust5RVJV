@@ -1,5 +1,3 @@
-use std::fs;
-
 pub fn solve_part1(input: &str) -> u64{
     let mut stock : Vec<(u64,u64)> = Vec::new();
 
