@@ -190,7 +190,7 @@ pub fn solve_part2(input: &str) -> u64{
             }
 
             if op == '*'{
-                res_bloc *= nb;;
+                res_bloc *= nb;
             }
         }
         dans_bloc = false;

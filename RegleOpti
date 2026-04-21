@@ -1,0 +1,2 @@
+1. Passer de .Char() a .lines()
+2. reduire au maximum les doubles boucles.
