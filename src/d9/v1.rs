@@ -43,7 +43,6 @@ pub fn solve_part2(input: &str) -> u64 {
 
     let n = red.len();
 
-    // Compression de coordonnées
     let mut xs: Vec<i64> = Vec::new();
     let mut ys: Vec<i64> = Vec::new();
     for &(x, y) in &red {

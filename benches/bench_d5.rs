@@ -32,18 +32,18 @@ fn bench_d5(c: &mut Criterion) {
 
     group_p1.finish();
 
-    // // Partie 2
-    // let mut group_p2 = c.benchmark_group("d5_part2");
+    // Partie 2
+    let mut group_p2 = c.benchmark_group("d5_part2");
 
-    // group_p2.bench_function("v1", |b| {
-    //     b.iter(|| black_box(d5::v1::solve_part2(black_box(input))))
-    // });
+    group_p2.bench_function("v1", |b| {
+        b.iter(|| black_box(d5::v1::solve_part2(black_box(input))))
+    });
 
-    // group_p2.bench_function("v2", |b| {
-    //     b.iter(|| black_box(d5::v2::solve_part2(black_box(input))))
-    // });
+    group_p2.bench_function("v2", |b| {
+        b.iter(|| black_box(d5::v2::solve_part2(black_box(input))))
+    });
 
-    // group_p2.finish();
+    group_p2.finish();
 
 }
 
