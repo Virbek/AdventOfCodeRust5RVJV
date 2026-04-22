@@ -21,6 +21,10 @@ fn bench_d7(c: &mut Criterion) {
         b.iter(|| black_box(d7::v2::solve_part1(black_box(input))))
     });
 
+    group_p1.bench_function("v3", |b| {
+        b.iter(|| black_box(d7::v3::solve_part1(black_box(input))))
+    });
+
     group_p1.finish();
 
     // Partie 2

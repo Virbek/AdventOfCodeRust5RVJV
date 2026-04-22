@@ -71,5 +71,8 @@ fn main() {
     println!("Day 10 - ver1 - part1, le résultat: {}", d10::v1::solve_part1(d10::INPUT));
 
     println!("Day 11 - ver1 - part1, le résultat: {}", d11::v1::solve_part1(d11::INPUT));
-    println!("Day 11 - ver1 - part1, le résultat: {}", d11::v1::solve_part2(d11::INPUT));
+    println!("Day 11 - ver1 - part2, le résultat: {}", d11::v1::solve_part2(d11::INPUT));
+
+    println!("Day 11 - ver2 - part1, le résultat: {}", d11::v2::solve_part1(d11::INPUT));
+    println!("Day 11 - ver2 - part1, le résultat: {}", d11::v2::solve_part2(d11::INPUT));
 }
