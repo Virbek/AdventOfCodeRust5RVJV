@@ -43,6 +43,10 @@ fn bench_d5(c: &mut Criterion) {
         b.iter(|| black_box(d5::v2::solve_part2(black_box(input))))
     });
 
+    group_p2.bench_function("v3", |b| {
+        b.iter(|| black_box(d5::v3::solve_part2(black_box(input))))
+    });
+
     group_p2.finish();
 
 }
@@ -50,17 +54,16 @@ fn bench_d5(c: &mut Criterion) {
 criterion_group!(benches, bench_d5);
 criterion_main!(benches);
 
-/*
-d5_v1_part1             time:   [156.18 µs 157.00 µs 157.84 µs]
-                        change: [−8.4319% −7.0860% −5.8676%] (p = 0.00 < 0.05)
-d5_v2_part1             time:   [94.725 µs 94.959 µs 95.211 µs]
-                        change: [−70.392% −70.060% −69.561%] (p = 0.00 < 0.05)
+// d5_part1/v1             time:   [381.57 µs 385.49 µs 389.74 µs]
+//                         change: [−20.456% −18.442% −16.426%] (p = 0.00 < 0.05)
+// d5_part1/v2             time:   [327.33 µs 332.17 µs 337.46 µs]
+//                         change: [−23.329% −21.205% −19.077%] (p = 0.00 < 0.05)
+// d5_part1/v3             time:   [68.697 µs 69.126 µs 69.577 µs]
+//                         change: [−18.250% −15.568% −13.017%] (p = 0.00 < 0.05)
 
-d5_v1_part2             time:   [14.349 µs 14.366 µs 14.383 µs]
-                        change: [−1.7289% −0.5935% +0.1008%] (p = 0.28 > 0.05)
+// d5_part2/v1             time:   [24.007 µs 24.184 µs 24.367 µs]
+//                         change: [−22.850% −20.762% −18.823%] (p = 0.00 < 0.05)
+// d5_part2/v2             time:   [21.296 µs 23.195 µs 25.625 µs]
+//                         change: [−11.584% −6.1330% +0.2170%] (p = 0.05 < 0.05)
+// d5_part2/v3             time:   [15.848 µs 15.964 µs 16.084 µs]
 
-d5_v2_part2             time:   [8.9248 µs 8.9499 µs 8.9797 µs]
-                        change: [−2.4884% −1.1460% +0.3739%] (p = 0.12 > 0.05)
-
-
- */

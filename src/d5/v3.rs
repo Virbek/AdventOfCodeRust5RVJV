@@ -56,37 +56,28 @@ pub fn solve_part2(input: &str) -> u64{
         .map(|(a, b)| (a.trim().parse().unwrap(), b.trim().parse().unwrap()))
         .collect();
 
-    index.sort();
+    index.sort_unstable();
 
-    let mut all_ingredient: Vec<(u64,u64)> = Vec::new();
     let mut res: u64 = 0;
+    let mut iter = index.into_iter();
 
-    for (x,y) in index{
-        let mut size: usize = 0;
-        //println!("j'affiche x et y : {} - {}",x , y);
-        //println!("je check un vecteur vide : {}", all_ingredient.len());
-        if all_ingredient.len() != 0{
-            size = all_ingredient.len() - 1;
+    if let Some((first_x, first_y)) = iter.next(){
+        let mut cur_x = first_x;
+        let mut cur_y = first_y;
+
+        for (x, y) in iter {
+            if x <= cur_y &&  y > cur_y{
+                cur_y = y;
+            } else if x > cur_y {
+                res += cur_y - cur_x + 1;
+                cur_x = x;
+                cur_y = y;
+            }      
         }
-        if size == 0 && all_ingredient.len() == 0{
-            all_ingredient.push((x,y));
-        }else{
-            if x <= all_ingredient[size].1 && y > all_ingredient[size].1{
-                //print!("je rentre dans 1 ");
-                all_ingredient[size].1 = y;
-            }else if x > all_ingredient[size].1{
-                //print!("je rentre dans 2 ");
-                all_ingredient.push((x,y));
-            }
-        }
-        //println!("verif : {} - {}", all_ingredient[size].0, all_ingredient[size].1 );
+
+        res += cur_y - cur_x + 1;
 
     }
 
-    for (x,y) in &all_ingredient  {
-        //println!("le x et le y : {} - {}", x,y);
-        res+= (y - x) +1;
-        //println!("le resultat : {}", res);
-    }
     res
 }
